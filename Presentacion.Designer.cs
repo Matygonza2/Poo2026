@@ -37,6 +37,12 @@ partial class Presentacion
         salirToolStripMenuItem = new ToolStripMenuItem();
         tabControl1 = new TabControl();
         tbcProducto = new TabPage();
+        btnBuscar = new Button();
+        btnEliminar = new Button();
+        btnModificar = new Button();
+        btnAdd = new Button();
+        dgvProducto = new DataGridView();
+        txtBuscarProducto = new TextBox();
         pbxFotoproducto = new PictureBox();
         ComboBoxSubcategoria = new ComboBox();
         comboBoxCategoria = new ComboBox();
@@ -59,6 +65,13 @@ partial class Presentacion
         lblDescripcion = new Label();
         lblNombre = new Label();
         tbcVendedor = new TabPage();
+        textBox2 = new TextBox();
+        label2 = new Label();
+        dataGridView2 = new DataGridView();
+        button8 = new Button();
+        button7 = new Button();
+        button6 = new Button();
+        button5 = new Button();
         pictureBox1 = new PictureBox();
         MskVendedorCuit = new MaskedTextBox();
         txtVendedorDni = new TextBox();
@@ -69,28 +82,14 @@ partial class Presentacion
         lblVendedorApellido = new Label();
         lblVendedorNombre = new Label();
         imageList1 = new ImageList(components);
-        label1 = new Label();
-        textBox1 = new TextBox();
-        dataGridView1 = new DataGridView();
-        button1 = new Button();
-        button2 = new Button();
-        button3 = new Button();
-        button4 = new Button();
-        button5 = new Button();
-        button6 = new Button();
-        button7 = new Button();
-        button8 = new Button();
-        dataGridView2 = new DataGridView();
-        label2 = new Label();
-        textBox2 = new TextBox();
         menuStrip1.SuspendLayout();
         tabControl1.SuspendLayout();
         tbcProducto.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
         ((System.ComponentModel.ISupportInitialize)pbxFotoproducto).BeginInit();
         tbcVendedor.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
         SuspendLayout();
         // 
         // toolStripMenuItem1
@@ -138,13 +137,12 @@ partial class Presentacion
         // 
         // tbcProducto
         // 
-        tbcProducto.Controls.Add(button4);
-        tbcProducto.Controls.Add(button3);
-        tbcProducto.Controls.Add(button2);
-        tbcProducto.Controls.Add(button1);
-        tbcProducto.Controls.Add(dataGridView1);
-        tbcProducto.Controls.Add(textBox1);
-        tbcProducto.Controls.Add(label1);
+        tbcProducto.Controls.Add(btnBuscar);
+        tbcProducto.Controls.Add(btnEliminar);
+        tbcProducto.Controls.Add(btnModificar);
+        tbcProducto.Controls.Add(btnAdd);
+        tbcProducto.Controls.Add(dgvProducto);
+        tbcProducto.Controls.Add(txtBuscarProducto);
         tbcProducto.Controls.Add(pbxFotoproducto);
         tbcProducto.Controls.Add(ComboBoxSubcategoria);
         tbcProducto.Controls.Add(comboBoxCategoria);
@@ -175,6 +173,58 @@ partial class Presentacion
         tbcProducto.Text = "Productos";
         tbcProducto.UseVisualStyleBackColor = true;
         tbcProducto.Click += tbcProducto_Click;
+        // 
+        // btnBuscar
+        // 
+        btnBuscar.Location = new Point(456, 163);
+        btnBuscar.Name = "btnBuscar";
+        btnBuscar.Size = new Size(112, 29);
+        btnBuscar.TabIndex = 27;
+        btnBuscar.Text = "Buscar";
+        btnBuscar.UseVisualStyleBackColor = true;
+        // 
+        // btnEliminar
+        // 
+        btnEliminar.Location = new Point(504, 284);
+        btnEliminar.Name = "btnEliminar";
+        btnEliminar.Size = new Size(112, 29);
+        btnEliminar.TabIndex = 26;
+        btnEliminar.Text = "Eliminar";
+        btnEliminar.UseVisualStyleBackColor = true;
+        // 
+        // btnModificar
+        // 
+        btnModificar.Location = new Point(284, 284);
+        btnModificar.Name = "btnModificar";
+        btnModificar.Size = new Size(112, 29);
+        btnModificar.TabIndex = 25;
+        btnModificar.Text = "Modificar";
+        btnModificar.UseVisualStyleBackColor = true;
+        // 
+        // btnAdd
+        // 
+        btnAdd.Location = new Point(28, 284);
+        btnAdd.Name = "btnAdd";
+        btnAdd.Size = new Size(112, 29);
+        btnAdd.TabIndex = 24;
+        btnAdd.Text = "Agregar";
+        btnAdd.UseVisualStyleBackColor = true;
+        // 
+        // dgvProducto
+        // 
+        dgvProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvProducto.Location = new Point(19, 331);
+        dgvProducto.Name = "dgvProducto";
+        dgvProducto.Size = new Size(649, 118);
+        dgvProducto.TabIndex = 23;
+        // 
+        // txtBuscarProducto
+        // 
+        txtBuscarProducto.Location = new Point(422, 134);
+        txtBuscarProducto.Name = "txtBuscarProducto";
+        txtBuscarProducto.PlaceholderText = "Buscar Producto . . .";
+        txtBuscarProducto.Size = new Size(197, 23);
+        txtBuscarProducto.TabIndex = 22;
         // 
         // pbxFotoproducto
         // 
@@ -367,6 +417,66 @@ partial class Presentacion
         tbcVendedor.Text = "Vendedores";
         tbcVendedor.UseVisualStyleBackColor = true;
         // 
+        // textBox2
+        // 
+        textBox2.Location = new Point(449, 97);
+        textBox2.Name = "textBox2";
+        textBox2.Size = new Size(157, 23);
+        textBox2.TabIndex = 15;
+        // 
+        // label2
+        // 
+        label2.AutoSize = true;
+        label2.Location = new Point(507, 57);
+        label2.Name = "label2";
+        label2.Size = new Size(38, 15);
+        label2.TabIndex = 14;
+        label2.Text = "label2";
+        // 
+        // dataGridView2
+        // 
+        dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridView2.Location = new Point(11, 330);
+        dataGridView2.Name = "dataGridView2";
+        dataGridView2.Size = new Size(651, 128);
+        dataGridView2.TabIndex = 13;
+        // 
+        // button8
+        // 
+        button8.Location = new Point(451, 144);
+        button8.Name = "button8";
+        button8.Size = new Size(155, 30);
+        button8.TabIndex = 12;
+        button8.Text = "button8";
+        button8.UseVisualStyleBackColor = true;
+        // 
+        // button7
+        // 
+        button7.Location = new Point(498, 298);
+        button7.Name = "button7";
+        button7.Size = new Size(155, 30);
+        button7.TabIndex = 11;
+        button7.Text = "button7";
+        button7.UseVisualStyleBackColor = true;
+        // 
+        // button6
+        // 
+        button6.Location = new Point(283, 298);
+        button6.Name = "button6";
+        button6.Size = new Size(155, 30);
+        button6.TabIndex = 10;
+        button6.Text = "button6";
+        button6.UseVisualStyleBackColor = true;
+        // 
+        // button5
+        // 
+        button5.Location = new Point(45, 298);
+        button5.Name = "button5";
+        button5.Size = new Size(155, 30);
+        button5.TabIndex = 9;
+        button5.Text = "button5";
+        button5.UseVisualStyleBackColor = true;
+        // 
         // pictureBox1
         // 
         pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -446,126 +556,6 @@ partial class Presentacion
         imageList1.Images.SetKeyName(0, "Vendedores.ico");
         imageList1.Images.SetKeyName(1, "Clientes.ico");
         // 
-        // label1
-        // 
-        label1.AutoSize = true;
-        label1.Location = new Point(504, 112);
-        label1.Name = "label1";
-        label1.Size = new Size(38, 15);
-        label1.TabIndex = 21;
-        label1.Text = "label1";
-        // 
-        // textBox1
-        // 
-        textBox1.Location = new Point(422, 134);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(197, 23);
-        textBox1.TabIndex = 22;
-        // 
-        // dataGridView1
-        // 
-        dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Location = new Point(19, 331);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.Size = new Size(649, 118);
-        dataGridView1.TabIndex = 23;
-        // 
-        // button1
-        // 
-        button1.Location = new Point(28, 284);
-        button1.Name = "button1";
-        button1.Size = new Size(112, 29);
-        button1.TabIndex = 24;
-        button1.Text = "button1";
-        button1.UseVisualStyleBackColor = true;
-        // 
-        // button2
-        // 
-        button2.Location = new Point(284, 284);
-        button2.Name = "button2";
-        button2.Size = new Size(112, 29);
-        button2.TabIndex = 25;
-        button2.Text = "button2";
-        button2.UseVisualStyleBackColor = true;
-        // 
-        // button3
-        // 
-        button3.Location = new Point(504, 284);
-        button3.Name = "button3";
-        button3.Size = new Size(112, 29);
-        button3.TabIndex = 26;
-        button3.Text = "button3";
-        button3.UseVisualStyleBackColor = true;
-        // 
-        // button4
-        // 
-        button4.Location = new Point(468, 170);
-        button4.Name = "button4";
-        button4.Size = new Size(112, 29);
-        button4.TabIndex = 27;
-        button4.Text = "button4";
-        button4.UseVisualStyleBackColor = true;
-        // 
-        // button5
-        // 
-        button5.Location = new Point(45, 298);
-        button5.Name = "button5";
-        button5.Size = new Size(155, 30);
-        button5.TabIndex = 9;
-        button5.Text = "button5";
-        button5.UseVisualStyleBackColor = true;
-        // 
-        // button6
-        // 
-        button6.Location = new Point(283, 298);
-        button6.Name = "button6";
-        button6.Size = new Size(155, 30);
-        button6.TabIndex = 10;
-        button6.Text = "button6";
-        button6.UseVisualStyleBackColor = true;
-        // 
-        // button7
-        // 
-        button7.Location = new Point(498, 298);
-        button7.Name = "button7";
-        button7.Size = new Size(155, 30);
-        button7.TabIndex = 11;
-        button7.Text = "button7";
-        button7.UseVisualStyleBackColor = true;
-        // 
-        // button8
-        // 
-        button8.Location = new Point(451, 144);
-        button8.Name = "button8";
-        button8.Size = new Size(155, 30);
-        button8.TabIndex = 12;
-        button8.Text = "button8";
-        button8.UseVisualStyleBackColor = true;
-        // 
-        // dataGridView2
-        // 
-        dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView2.Location = new Point(11, 330);
-        dataGridView2.Name = "dataGridView2";
-        dataGridView2.Size = new Size(651, 128);
-        dataGridView2.TabIndex = 13;
-        // 
-        // label2
-        // 
-        label2.AutoSize = true;
-        label2.Location = new Point(507, 57);
-        label2.Name = "label2";
-        label2.Size = new Size(38, 15);
-        label2.TabIndex = 14;
-        label2.Text = "label2";
-        // 
-        // textBox2
-        // 
-        textBox2.Location = new Point(449, 97);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new Size(157, 23);
-        textBox2.TabIndex = 15;
-        // 
         // Presentacion
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
@@ -584,12 +574,12 @@ partial class Presentacion
         tabControl1.ResumeLayout(false);
         tbcProducto.ResumeLayout(false);
         tbcProducto.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
         ((System.ComponentModel.ISupportInitialize)pbxFotoproducto).EndInit();
         tbcVendedor.ResumeLayout(false);
         tbcVendedor.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -649,9 +639,12 @@ partial class Presentacion
     private Button button4;
     private Button button3;
     private Button button2;
-    private Button button1;
-    private DataGridView dataGridView1;
-    private TextBox textBox1;
+    private Button btnBuscar;
+    private Button btnEliminar;
+    private Button btnModificar;
+    private Button btnAdd;
+    private DataGridView dgvProducto;
+    private TextBox txtBuscarProducto;
     private Label label1;
     private TextBox textBox2;
     private Label label2;
