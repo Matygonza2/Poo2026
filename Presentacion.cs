@@ -14,12 +14,16 @@ public partial class Presentacion : Form
 
     private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
     {
-       
+
     }
 
     private void tbcProducto_Click(object sender, EventArgs e)
     {
-       
+
     }
 
+    private void button5_Click(object sender, EventArgs e)
+    {
+
+    }
 }
