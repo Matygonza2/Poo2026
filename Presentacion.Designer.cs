@@ -435,6 +435,7 @@ partial class Presentacion
         dgvVendedor.Name = "dgvVendedor";
         dgvVendedor.Size = new Size(651, 128);
         dgvVendedor.TabIndex = 13;
+        dgvVendedor.CellClick += dgvVendedor_CellClick;
         // 
         // btnBuscarVend
         // 

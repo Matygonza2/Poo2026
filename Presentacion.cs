@@ -240,7 +240,15 @@ public partial class Presentacion : Form
             MessageBox.Show("Error al eliminar:\n" + ex.Message);
         }
     }
+    private void dgvVendedor_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        if (dgvVendedor.CurrentRow == null) return;
 
+        txtNomVendedor.Text = dgvVendedor.CurrentRow.Cells["Nombre"].Value.ToString();
+        txtApellVendedor.Text = dgvVendedor.CurrentRow.Cells["Apellido"].Value.ToString();
+        txtDNI.Text = dgvVendedor.CurrentRow.Cells["DNI"].Value.ToString();
+        mtbCUIT.Text = dgvVendedor.CurrentRow.Cells["CUIT"].Value.ToString();
+    }
     private void tbcProducto_Click(object sender, EventArgs e)
     {
 
