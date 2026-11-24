@@ -26,4 +26,9 @@ public partial class Presentacion : Form
     {
 
     }
+
+    private void btnModificarVend_Click(object sender, EventArgs e)
+    {
+
+    }
 }
