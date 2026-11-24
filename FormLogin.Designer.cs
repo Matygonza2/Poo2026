@@ -28,44 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
+            lblUsuario = new Label();
+            lblContraseña = new Label();
+            txtContraseña = new TextBox();
+            mtbContraseña = new MaskedTextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblUsuario
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(89, 56);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new Point(89, 56);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.TabIndex = 0;
+            lblUsuario.Text = "Usuario";
             // 
-            // label2
+            // lblContraseña
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(89, 96);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblContraseña.AutoSize = true;
+            lblContraseña.Location = new Point(89, 96);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(67, 15);
+            lblContraseña.TabIndex = 1;
+            lblContraseña.Text = "Contraseña";
             // 
-            // textBox1
+            // txtContraseña
             // 
-            textBox1.Location = new Point(251, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            txtContraseña.Location = new Point(251, 48);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(100, 23);
+            txtContraseña.TabIndex = 2;
+            // 
+            // mtbContraseña
+            // 
+            mtbContraseña.Location = new Point(242, 90);
+            mtbContraseña.Name = "mtbContraseña";
+            mtbContraseña.Size = new Size(112, 23);
+            mtbContraseña.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(251, 139);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(button1);
+            Controls.Add(mtbContraseña);
+            Controls.Add(txtContraseña);
+            Controls.Add(lblContraseña);
+            Controls.Add(lblUsuario);
             Name = "FormLogin";
             Text = "FormLogin";
             ResumeLayout(false);
@@ -74,8 +94,10 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox textBox1;
+        private Label lblUsuario;
+        private Label lblContraseña;
+        private TextBox txtContraseña;
+        private MaskedTextBox mtbContraseña;
+        private Button button1;
     }
 }
