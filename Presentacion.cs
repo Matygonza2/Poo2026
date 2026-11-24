@@ -254,10 +254,5 @@ public partial class Presentacion : Form
 
     }
 
-    private void button5_Click(object sender, EventArgs e)
-    {
-
-    }
-
    
 }

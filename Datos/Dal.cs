@@ -191,7 +191,7 @@ namespace Integrador2025.Datos
             com.Parameters.Add("@pNombre", SqlDbType.VarChar, 80).Value = pNombre;
             com.Parameters.Add("@pApellido", SqlDbType.VarChar, 80).Value = pApellido;
             com.Parameters.Add("@pDni", SqlDbType.Int).Value = pDni;
-            com.Parameters.Add("@pCuit", SqlDbType.VarChar, 20).Value = pCuit;
+            com.Parameters.Add("@pCuit", SqlDbType.NVarChar, 13).Value = pCuit.Trim();
 
             try
             {
@@ -235,7 +235,7 @@ namespace Integrador2025.Datos
             com.Parameters.Add("@pNombre", SqlDbType.VarChar, 80).Value = pNombre;
             com.Parameters.Add("@pApellido", SqlDbType.VarChar, 80).Value = pApellido;
             com.Parameters.Add("@pDni", SqlDbType.Int).Value = pDni;
-            com.Parameters.Add("@pCuit", SqlDbType.VarChar, 20).Value = pCuit;
+            com.Parameters.Add("@pCuit", SqlDbType.NVarChar, 13).Value = pCuit.Trim();
             com.Parameters.Add("@pIdVendedor", SqlDbType.Int).Value = pIdVendedor;
 
             try

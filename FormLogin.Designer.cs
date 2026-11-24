@@ -64,6 +64,7 @@
             // 
             mtbContraseña.Location = new Point(242, 90);
             mtbContraseña.Name = "mtbContraseña";
+            mtbContraseña.PasswordChar = '*';
             mtbContraseña.Size = new Size(112, 23);
             mtbContraseña.TabIndex = 3;
             // 

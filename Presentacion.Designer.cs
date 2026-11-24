@@ -475,7 +475,7 @@ partial class Presentacion
         btnAgregarVend.TabIndex = 9;
         btnAgregarVend.Text = "Agregar";
         btnAgregarVend.UseVisualStyleBackColor = true;
-        btnAgregarVend.Click += button5_Click;
+        btnAgregarVend.Click += btnAgregarVend_Click;
         // 
         // pictureBox1
         // 
@@ -490,7 +490,7 @@ partial class Presentacion
         // mtbCUIT
         // 
         mtbCUIT.Location = new Point(91, 128);
-        mtbCUIT.Mask = " 99-99999999-9 ";
+        mtbCUIT.Mask = "00-00000000-0";
         mtbCUIT.Name = "mtbCUIT";
         mtbCUIT.Size = new Size(187, 23);
         mtbCUIT.TabIndex = 7;
