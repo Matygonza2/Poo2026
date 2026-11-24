@@ -92,6 +92,34 @@ public partial class Presentacion : Form
         cmbSubCat.Text = dgvProducto.CurrentRow.Cells["SUBCATEGORIA"].Value.ToString();
     }
 
+    private void btnEliminar_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (dgvProducto.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto.");
+                return;
+            }
+            if (MessageBox.Show("¿Eliminar producto seleccionado?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            //obtener ID
+            int idSeleccionado = Convert.ToInt32(dgvProducto.CurrentRow.Cells["ID_PRODUCTO"].Value);
+
+            Dal objdal = new Dal();
+            objdal.EliminarProducto(idSeleccionado);
+
+            MessageBox.Show("Producto eliminado con éxito");
+            btnBuscar_Click(null, null);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al eliminar:\n" + ex.Message);
+        }
+    }
+
+
     private void btnBuscar_Click(object sender, EventArgs e)
     {
         try

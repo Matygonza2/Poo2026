@@ -191,6 +191,7 @@ partial class Presentacion
         btnEliminar.TabIndex = 26;
         btnEliminar.Text = "Eliminar";
         btnEliminar.UseVisualStyleBackColor = true;
+        btnEliminar.Click += btnEliminar_Click;
         // 
         // btnModificar
         // 
