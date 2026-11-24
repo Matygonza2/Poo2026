@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\home\\Documents\\TP2026Poo\\Integrador2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\home\\Documents\\TP2026Poo\\Integrador2026\\Presentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Presentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F1335B6-4644-456C-BCF5-DD0D002FBEFD}|Integrador2026.csproj|c:\\users\\home\\documents\\tp2026poo\\integrador2026\\presentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F1335B6-4644-456C-BCF5-DD0D002FBEFD}|Integrador2026.csproj|solutionrelative:presentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -23,15 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Presentacion.cs",
+              "Title": "Presentacion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\home\\Documents\\TP2026Poo\\Integrador2026\\Presentacion.cs",
               "RelativeDocumentMoniker": "Presentacion.cs",
-              "ToolTip": "C:\\Users\\home\\Documents\\TP2026Poo\\Integrador2026\\Presentacion.cs",
-              "RelativeToolTip": "Presentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\home\\Documents\\TP2026Poo\\Integrador2026\\Presentacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T00:01:25.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T10:17:46.311Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
