@@ -72,10 +72,10 @@ partial class Presentacion
         btnModificarVend = new Button();
         btnAgregarVend = new Button();
         pictureBox1 = new PictureBox();
-        MskVendedorCuit = new MaskedTextBox();
-        txtVendedorDni = new TextBox();
-        txtVendedorApellido = new TextBox();
-        txtVendedorNombre = new TextBox();
+        mtbCUIT = new MaskedTextBox();
+        txtDNI = new TextBox();
+        txtApellVendedor = new TextBox();
+        txtNomVendedor = new TextBox();
         lblVendedorCuit = new Label();
         lblVendedorDni = new Label();
         lblVendedorApellido = new Label();
@@ -403,10 +403,10 @@ partial class Presentacion
         tbcVendedor.Controls.Add(btnModificarVend);
         tbcVendedor.Controls.Add(btnAgregarVend);
         tbcVendedor.Controls.Add(pictureBox1);
-        tbcVendedor.Controls.Add(MskVendedorCuit);
-        tbcVendedor.Controls.Add(txtVendedorDni);
-        tbcVendedor.Controls.Add(txtVendedorApellido);
-        tbcVendedor.Controls.Add(txtVendedorNombre);
+        tbcVendedor.Controls.Add(mtbCUIT);
+        tbcVendedor.Controls.Add(txtDNI);
+        tbcVendedor.Controls.Add(txtApellVendedor);
+        tbcVendedor.Controls.Add(txtNomVendedor);
         tbcVendedor.Controls.Add(lblVendedorCuit);
         tbcVendedor.Controls.Add(lblVendedorDni);
         tbcVendedor.Controls.Add(lblVendedorApellido);
@@ -444,6 +444,7 @@ partial class Presentacion
         btnBuscarVend.TabIndex = 12;
         btnBuscarVend.Text = "Buscar";
         btnBuscarVend.UseVisualStyleBackColor = true;
+        btnBuscarVend.Click += btnBuscarVend_Click;
         // 
         // btnEliminarVend
         // 
@@ -453,6 +454,7 @@ partial class Presentacion
         btnEliminarVend.TabIndex = 11;
         btnEliminarVend.Text = "Eliminar";
         btnEliminarVend.UseVisualStyleBackColor = true;
+        btnEliminarVend.Click += btnEliminarVend_Click;
         // 
         // btnModificarVend
         // 
@@ -484,34 +486,34 @@ partial class Presentacion
         pictureBox1.TabIndex = 8;
         pictureBox1.TabStop = false;
         // 
-        // MskVendedorCuit
+        // mtbCUIT
         // 
-        MskVendedorCuit.Location = new Point(91, 128);
-        MskVendedorCuit.Mask = " 99-99999999-9 ";
-        MskVendedorCuit.Name = "MskVendedorCuit";
-        MskVendedorCuit.Size = new Size(187, 23);
-        MskVendedorCuit.TabIndex = 7;
+        mtbCUIT.Location = new Point(91, 128);
+        mtbCUIT.Mask = " 99-99999999-9 ";
+        mtbCUIT.Name = "mtbCUIT";
+        mtbCUIT.Size = new Size(187, 23);
+        mtbCUIT.TabIndex = 7;
         // 
-        // txtVendedorDni
+        // txtDNI
         // 
-        txtVendedorDni.Location = new Point(101, 88);
-        txtVendedorDni.Name = "txtVendedorDni";
-        txtVendedorDni.Size = new Size(145, 23);
-        txtVendedorDni.TabIndex = 6;
+        txtDNI.Location = new Point(101, 88);
+        txtDNI.Name = "txtDNI";
+        txtDNI.Size = new Size(145, 23);
+        txtDNI.TabIndex = 6;
         // 
-        // txtVendedorApellido
+        // txtApellVendedor
         // 
-        txtVendedorApellido.Location = new Point(101, 59);
-        txtVendedorApellido.Name = "txtVendedorApellido";
-        txtVendedorApellido.Size = new Size(145, 23);
-        txtVendedorApellido.TabIndex = 5;
+        txtApellVendedor.Location = new Point(101, 59);
+        txtApellVendedor.Name = "txtApellVendedor";
+        txtApellVendedor.Size = new Size(145, 23);
+        txtApellVendedor.TabIndex = 5;
         // 
-        // txtVendedorNombre
+        // txtNomVendedor
         // 
-        txtVendedorNombre.Location = new Point(101, 24);
-        txtVendedorNombre.Name = "txtVendedorNombre";
-        txtVendedorNombre.Size = new Size(145, 23);
-        txtVendedorNombre.TabIndex = 4;
+        txtNomVendedor.Location = new Point(101, 24);
+        txtNomVendedor.Name = "txtNomVendedor";
+        txtNomVendedor.Size = new Size(145, 23);
+        txtNomVendedor.TabIndex = 4;
         // 
         // lblVendedorCuit
         // 
@@ -583,11 +585,11 @@ partial class Presentacion
 
     private System.Windows.Forms.PictureBox pictureBox1;
 
-    private System.Windows.Forms.MaskedTextBox MskVendedorCuit;
+    private System.Windows.Forms.MaskedTextBox mtbCUIT;
 
-    private System.Windows.Forms.TextBox txtVendedorNombre;
-    private System.Windows.Forms.TextBox txtVendedorApellido;
-    private System.Windows.Forms.TextBox txtVendedorDni;
+    private System.Windows.Forms.TextBox txtNomVendedor;
+    private System.Windows.Forms.TextBox txtApellVendedor;
+    private System.Windows.Forms.TextBox txtDNI;
 
     private System.Windows.Forms.Label lblVendedorNombre;
     private System.Windows.Forms.Label lblVendedorApellido;

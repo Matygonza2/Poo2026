@@ -160,6 +160,86 @@ public partial class Presentacion : Form
     {
 
     }
+    private void btnBuscarVend_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Dal db = new Dal();
+            DataSet ds = db.BuscarVendedor(txtBuscarVend.Text);
+            dgvVendedor.DataSource = ds.Tables[0];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al buscar:\n" + ex.Message);
+        }
+    }
+    private void btnAgregarVend_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Dal db = new Dal();
+
+            db.AgregarVendedor(
+                txtNomVendedor.Text,
+                txtApellVendedor.Text,
+                Convert.ToInt32(txtDNI.Text),
+                mtbCUIT.Text);
+            MessageBox.Show("Vendedor registrado con éxito.");
+            btnBuscarVend_Click(null, null);
+            LimpiarControles(this);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al agregar:\n" + ex.Message);
+        }
+    }
+    private void btnModificarVend_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (dgvVendedor.CurrentRow == null)
+                throw new Exception("Debe seleccionar un vendedor.");
+
+            int id = Convert.ToInt32(dgvVendedor.CurrentRow.Cells["ID_VENDEDOR"].Value);
+
+            Dal db = new Dal();
+
+            db.ModificarVendedor(
+                id,
+                txtNomVendedor.Text,
+                txtApellVendedor.Text,
+                Convert.ToInt32(txtDNI.Text),
+                mtbCUIT.Text);
+            MessageBox.Show("Vendedor modificado con éxito.");
+            btnBuscarVend_Click(null, null);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al modificar:\n" + ex.Message);
+        }
+    }
+    private void btnEliminarVend_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (dgvVendedor.CurrentRow == null)
+                throw new Exception("Debe seleccionar un vendedor.");
+            if (MessageBox.Show("¿Eliminar vendedor?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            int id = Convert.ToInt32(dgvVendedor.CurrentRow.Cells["ID_VENDEDOR"].Value);
+
+            Dal db = new Dal();
+            db.EliminarVendedor(id);
+
+            MessageBox.Show("Vendedor eliminado con éxito.");
+            btnBuscarVend_Click(null, null);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al eliminar:\n" + ex.Message);
+        }
+    }
 
     private void tbcProducto_Click(object sender, EventArgs e)
     {
@@ -171,8 +251,5 @@ public partial class Presentacion : Form
 
     }
 
-    private void btnModificarVend_Click(object sender, EventArgs e)
-    {
-
-    }
+   
 }
