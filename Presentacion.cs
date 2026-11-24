@@ -39,6 +39,59 @@ public partial class Presentacion : Form
             MessageBox.Show("Error al agregar el producto:\n" + ex.Message);
         }
     }
+    private void btnModificar_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (dgvProducto.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto."); return;
+            }
+
+            int idSeleccionado = Convert.ToInt32(dgvProducto.CurrentRow.Cells["ID_PRODUCTO"].Value);
+
+            Dal objdal = new Dal();
+            objdal.ModificarProducto(
+                idSeleccionado,
+                txtNombre.Text,
+                txtDescripcion.Text,
+                Convert.ToDecimal(txtPrecioCosto.Text),
+                Convert.ToDecimal(txtMargen.Text),
+                Convert.ToDecimal(txtIVA.Text),
+                Convert.ToDecimal(txtPrecioBruto.Text),
+                Convert.ToDecimal(txtPrecioVenta.Text),
+                txtProveedor.Text,
+                cmbCategoria.Text,
+                cmbSubCat.Text);
+            MessageBox.Show("Producto modificado con éxito");
+
+
+            // Recargar la grilla
+            //DataSet ds = objdal.BuscarProducto("");
+            //dgvProducto.DataSource = ds.Tables[0];
+        }
+
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error al modificar:\n" + ex.Message);
+        }
+    }
+    private void dgvProducto_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        if (dgvProducto.CurrentRow == null) return;
+
+        txtNombre.Text = dgvProducto.CurrentRow.Cells["NOMBRE"].Value.ToString();
+        txtDescripcion.Text = dgvProducto.CurrentRow.Cells["DESCRIPCION"].Value.ToString();
+        txtPrecioCosto.Text = dgvProducto.CurrentRow.Cells["PRECIOCOSTO"].Value.ToString();
+        txtMargen.Text = dgvProducto.CurrentRow.Cells["MARGEN"].Value.ToString();
+        txtIVA.Text = dgvProducto.CurrentRow.Cells["IVA"].Value.ToString();
+        txtPrecioBruto.Text = dgvProducto.CurrentRow.Cells["PRECIOBRUTO"].Value.ToString();
+        txtPrecioVenta.Text = dgvProducto.CurrentRow.Cells["PRECIOVENTA"].Value.ToString();
+        txtProveedor.Text = dgvProducto.CurrentRow.Cells["PROVEEDOR"].Value.ToString();
+        cmbCategoria.Text = dgvProducto.CurrentRow.Cells["CATEGORIA"].Value.ToString();
+        cmbSubCat.Text = dgvProducto.CurrentRow.Cells["SUBCATEGORIA"].Value.ToString();
+    }
+
     private void btnBuscar_Click(object sender, EventArgs e)
     {
         try

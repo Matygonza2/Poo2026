@@ -181,6 +181,7 @@ partial class Presentacion
         btnBuscar.TabIndex = 27;
         btnBuscar.Text = "Buscar";
         btnBuscar.UseVisualStyleBackColor = true;
+        btnBuscar.Click += btnBuscar_Click;
         // 
         // btnEliminar
         // 
@@ -199,6 +200,7 @@ partial class Presentacion
         btnModificar.TabIndex = 25;
         btnModificar.Text = "Modificar";
         btnModificar.UseVisualStyleBackColor = true;
+        btnModificar.Click += btnModificar_Click;
         // 
         // btnAdd
         // 
@@ -208,6 +210,7 @@ partial class Presentacion
         btnAdd.TabIndex = 24;
         btnAdd.Text = "Agregar";
         btnAdd.UseVisualStyleBackColor = true;
+        btnAdd.Click += btnAdd_Click;
         // 
         // dgvProducto
         // 
@@ -216,6 +219,7 @@ partial class Presentacion
         dgvProducto.Name = "dgvProducto";
         dgvProducto.Size = new Size(649, 118);
         dgvProducto.TabIndex = 23;
+        dgvProducto.CellClick += dgvProducto_CellClick;
         // 
         // txtBuscarProducto
         // 
