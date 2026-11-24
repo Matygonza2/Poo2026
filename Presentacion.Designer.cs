@@ -44,15 +44,15 @@ partial class Presentacion
         dgvProducto = new DataGridView();
         txtBuscarProducto = new TextBox();
         pbxFotoproducto = new PictureBox();
-        ComboBoxSubcategoria = new ComboBox();
-        comboBoxCategoria = new ComboBox();
+        cmbSubCat = new ComboBox();
+        cmbCategoria = new ComboBox();
         txtProveedor = new TextBox();
         txtPrecioVenta = new TextBox();
         txtPrecioBruto = new TextBox();
-        txtIva = new TextBox();
+        txtIVA = new TextBox();
         txtMargen = new TextBox();
         txtPrecioCosto = new TextBox();
-        txtDecripcion = new TextBox();
+        txtDescripcion = new TextBox();
         txtNombre = new TextBox();
         lblSubcategoria = new Label();
         lblCategoria = new Label();
@@ -65,8 +65,8 @@ partial class Presentacion
         lblDescripcion = new Label();
         lblNombre = new Label();
         tbcVendedor = new TabPage();
-        this.txtBuscarVend = new TextBox();
-        this.dgvVendedor = new DataGridView();
+        txtBuscarVend = new TextBox();
+        dgvVendedor = new DataGridView();
         btnBuscarVend = new Button();
         btnEliminarVend = new Button();
         btnModificarVend = new Button();
@@ -87,7 +87,7 @@ partial class Presentacion
         ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
         ((System.ComponentModel.ISupportInitialize)pbxFotoproducto).BeginInit();
         tbcVendedor.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)this.dgvVendedor).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvVendedor).BeginInit();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
         SuspendLayout();
         // 
@@ -143,15 +143,15 @@ partial class Presentacion
         tbcProducto.Controls.Add(dgvProducto);
         tbcProducto.Controls.Add(txtBuscarProducto);
         tbcProducto.Controls.Add(pbxFotoproducto);
-        tbcProducto.Controls.Add(ComboBoxSubcategoria);
-        tbcProducto.Controls.Add(comboBoxCategoria);
+        tbcProducto.Controls.Add(cmbSubCat);
+        tbcProducto.Controls.Add(cmbCategoria);
         tbcProducto.Controls.Add(txtProveedor);
         tbcProducto.Controls.Add(txtPrecioVenta);
         tbcProducto.Controls.Add(txtPrecioBruto);
-        tbcProducto.Controls.Add(txtIva);
+        tbcProducto.Controls.Add(txtIVA);
         tbcProducto.Controls.Add(txtMargen);
         tbcProducto.Controls.Add(txtPrecioCosto);
-        tbcProducto.Controls.Add(txtDecripcion);
+        tbcProducto.Controls.Add(txtDescripcion);
         tbcProducto.Controls.Add(txtNombre);
         tbcProducto.Controls.Add(lblSubcategoria);
         tbcProducto.Controls.Add(lblCategoria);
@@ -235,23 +235,23 @@ partial class Presentacion
         pbxFotoproducto.TabIndex = 20;
         pbxFotoproducto.TabStop = false;
         // 
-        // ComboBoxSubcategoria
+        // cmbSubCat
         // 
-        ComboBoxSubcategoria.FormattingEnabled = true;
-        ComboBoxSubcategoria.Items.AddRange(new object[] { " SUBCATEGORIA A.A", "SUBCATEGORIA A.B", "SUBCATEGORIA A.C", "SUBCATEGORIA B.B", "SUBCATEGORIA B.C", "SUBCATEGORIA C.C" });
-        ComboBoxSubcategoria.Location = new Point(136, 247);
-        ComboBoxSubcategoria.Name = "ComboBoxSubcategoria";
-        ComboBoxSubcategoria.Size = new Size(231, 23);
-        ComboBoxSubcategoria.TabIndex = 19;
+        cmbSubCat.FormattingEnabled = true;
+        cmbSubCat.Items.AddRange(new object[] { " SUBCATEGORIA A.A", "SUBCATEGORIA A.B", "SUBCATEGORIA A.C", "SUBCATEGORIA B.B", "SUBCATEGORIA B.C", "SUBCATEGORIA C.C" });
+        cmbSubCat.Location = new Point(136, 247);
+        cmbSubCat.Name = "cmbSubCat";
+        cmbSubCat.Size = new Size(231, 23);
+        cmbSubCat.TabIndex = 19;
         // 
-        // comboBoxCategoria
+        // cmbCategoria
         // 
-        comboBoxCategoria.FormattingEnabled = true;
-        comboBoxCategoria.Items.AddRange(new object[] { "CATEGORIA A ", "CATEGORIA B ", "CATEGORIA C" });
-        comboBoxCategoria.Location = new Point(136, 218);
-        comboBoxCategoria.Name = "comboBoxCategoria";
-        comboBoxCategoria.Size = new Size(231, 23);
-        comboBoxCategoria.TabIndex = 18;
+        cmbCategoria.FormattingEnabled = true;
+        cmbCategoria.Items.AddRange(new object[] { "CATEGORIA A ", "CATEGORIA B ", "CATEGORIA C" });
+        cmbCategoria.Location = new Point(136, 218);
+        cmbCategoria.Name = "cmbCategoria";
+        cmbCategoria.Size = new Size(231, 23);
+        cmbCategoria.TabIndex = 18;
         // 
         // txtProveedor
         // 
@@ -274,12 +274,12 @@ partial class Presentacion
         txtPrecioBruto.Size = new Size(226, 23);
         txtPrecioBruto.TabIndex = 15;
         // 
-        // txtIva
+        // txtIVA
         // 
-        txtIva.Location = new Point(136, 112);
-        txtIva.Name = "txtIva";
-        txtIva.Size = new Size(226, 23);
-        txtIva.TabIndex = 14;
+        txtIVA.Location = new Point(136, 112);
+        txtIVA.Name = "txtIVA";
+        txtIVA.Size = new Size(226, 23);
+        txtIVA.TabIndex = 14;
         // 
         // txtMargen
         // 
@@ -295,12 +295,12 @@ partial class Presentacion
         txtPrecioCosto.Size = new Size(226, 23);
         txtPrecioCosto.TabIndex = 12;
         // 
-        // txtDecripcion
+        // txtDescripcion
         // 
-        txtDecripcion.Location = new Point(136, 38);
-        txtDecripcion.Name = "txtDecripcion";
-        txtDecripcion.Size = new Size(226, 23);
-        txtDecripcion.TabIndex = 11;
+        txtDescripcion.Location = new Point(136, 38);
+        txtDescripcion.Name = "txtDescripcion";
+        txtDescripcion.Size = new Size(226, 23);
+        txtDescripcion.TabIndex = 11;
         // 
         // txtNombre
         // 
@@ -391,8 +391,8 @@ partial class Presentacion
         // 
         // tbcVendedor
         // 
-        tbcVendedor.Controls.Add(this.txtBuscarVend);
-        tbcVendedor.Controls.Add(this.dgvVendedor);
+        tbcVendedor.Controls.Add(txtBuscarVend);
+        tbcVendedor.Controls.Add(dgvVendedor);
         tbcVendedor.Controls.Add(btnBuscarVend);
         tbcVendedor.Controls.Add(btnEliminarVend);
         tbcVendedor.Controls.Add(btnModificarVend);
@@ -417,19 +417,19 @@ partial class Presentacion
         // 
         // txtBuscarVend
         // 
-        this.txtBuscarVend.Location = new Point(449, 97);
-        this.txtBuscarVend.Name = "txtBuscarVend";
-        this.txtBuscarVend.PlaceholderText = "Buscar Vendedor . . .";
-        this.txtBuscarVend.Size = new Size(157, 23);
-        this.txtBuscarVend.TabIndex = 15;
+        txtBuscarVend.Location = new Point(449, 97);
+        txtBuscarVend.Name = "txtBuscarVend";
+        txtBuscarVend.PlaceholderText = "Buscar Vendedor . . .";
+        txtBuscarVend.Size = new Size(157, 23);
+        txtBuscarVend.TabIndex = 15;
         // 
         // dgvVendedor
         // 
-        this.dgvVendedor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvVendedor.Location = new Point(11, 330);
-        this.dgvVendedor.Name = "dgvVendedor";
-        this.dgvVendedor.Size = new Size(651, 128);
-        this.dgvVendedor.TabIndex = 13;
+        dgvVendedor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvVendedor.Location = new Point(11, 330);
+        dgvVendedor.Name = "dgvVendedor";
+        dgvVendedor.Size = new Size(651, 128);
+        dgvVendedor.TabIndex = 13;
         // 
         // btnBuscarVend
         // 
@@ -570,7 +570,7 @@ partial class Presentacion
         ((System.ComponentModel.ISupportInitialize)pbxFotoproducto).EndInit();
         tbcVendedor.ResumeLayout(false);
         tbcVendedor.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)this.dgvVendedor).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvVendedor).EndInit();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
         ResumeLayout(false);
         PerformLayout();
@@ -591,15 +591,15 @@ partial class Presentacion
 
     private System.Windows.Forms.PictureBox pbxFotoproducto;
 
-    private System.Windows.Forms.ComboBox ComboBoxSubcategoria;
+    private System.Windows.Forms.ComboBox cmbSubCat;
 
-    private System.Windows.Forms.ComboBox comboBoxCategoria;
+    private System.Windows.Forms.ComboBox cmbCategoria;
 
     private System.Windows.Forms.TextBox txtNombre;
-    private System.Windows.Forms.TextBox txtDecripcion;
+    private System.Windows.Forms.TextBox txtDescripcion;
     private System.Windows.Forms.TextBox txtPrecioCosto;
     private System.Windows.Forms.TextBox txtMargen;
-    private System.Windows.Forms.TextBox txtIva;
+    private System.Windows.Forms.TextBox txtIVA;
     private System.Windows.Forms.TextBox txtPrecioBruto;
     private System.Windows.Forms.TextBox txtPrecioVenta;
     private System.Windows.Forms.TextBox txtProveedor;
