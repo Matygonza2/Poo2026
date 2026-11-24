@@ -30,7 +30,7 @@
         {
             lblUsuario = new Label();
             lblContraseña = new Label();
-            txtContraseña = new TextBox();
+            txtUsuario = new TextBox();
             mtbContraseña = new MaskedTextBox();
             btnIngresar = new Button();
             SuspendLayout();
@@ -53,12 +53,12 @@
             lblContraseña.TabIndex = 1;
             lblContraseña.Text = "Contraseña";
             // 
-            // txtContraseña
+            // txtUsuario
             // 
-            txtContraseña.Location = new Point(251, 48);
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(100, 23);
-            txtContraseña.TabIndex = 2;
+            txtUsuario.Location = new Point(242, 48);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(109, 23);
+            txtUsuario.TabIndex = 2;
             // 
             // mtbContraseña
             // 
@@ -75,6 +75,7 @@
             btnIngresar.TabIndex = 4;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // FormLogin
             // 
@@ -83,7 +84,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnIngresar);
             Controls.Add(mtbContraseña);
-            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
             Name = "FormLogin";
@@ -96,7 +97,7 @@
 
         private Label lblUsuario;
         private Label lblContraseña;
-        private TextBox txtContraseña;
+        private TextBox txtUsuario;
         private MaskedTextBox mtbContraseña;
         private Button btnIngresar;
     }
